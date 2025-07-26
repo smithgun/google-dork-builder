@@ -1,0 +1,34 @@
+{
+  "name": "gdork-osint",
+  "version": "1.0.0",
+  "description": "Google Dork OSINT Tool for Information Gathering",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.11.2",
+    "fs-extra": "^11.1.1",
+    "helmet": "^6.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "osint",
+    "google-dork",
+    "security",
+    "information-gathering"
+  ],
+  "author": "OSINT Tool",
+  "license": "MIT"
+}

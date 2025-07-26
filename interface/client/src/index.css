@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: rgb(0, 0, 255);
+  --primary-light: rgb(51, 51, 255);
+  --primary-dark: rgb(0, 0, 204);
+  --accent-color: rgb(0, 102, 255);
+  --background-color: #ffffff;
+  --surface-color: #f8fafc;
+  --text-primary: rgb(0, 0, 255);
+  --text-secondary: #666666;
+  --border-color: #e2e8f0;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply text-white px-6 py-3 rounded-lg transition-all duration-200 font-medium shadow-md hover:shadow-lg;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    transform: translateY(-1px);
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg transition-all duration-200 font-medium border border-gray-300;
+  }
+  
+  .btn-secondary:hover {
+    transform: translateY(-1px);
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
+    box-shadow: 0 4px 6px -1px rgba(0, 51, 102, 0.1), 0 2px 4px -1px rgba(0, 51, 102, 0.06);
+  }
+  
+  .card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 51, 102, 0.1), 0 4px 6px -2px rgba(0, 51, 102, 0.05);
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg outline-none transition-all duration-200;
+    border-color: var(--border-color);
+  }
+  
+  .input-field:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+  }
+  
+  .dork-item {
+    @apply bg-white border border-gray-200 rounded-xl p-6 transition-all duration-200 cursor-pointer;
+    border-color: var(--border-color);
+  }
+  
+  .dork-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .category-badge {
+    @apply inline-block px-3 py-1 text-xs font-medium rounded-full;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .risk-critical {
+    @apply bg-red-100 text-red-800 border-red-200;
+  }
+  
+  .risk-high {
+    @apply bg-orange-100 text-orange-800 border-orange-200;
+  }
+  
+  .risk-medium {
+    @apply bg-yellow-100 text-yellow-800 border-yellow-200;
+  }
+  
+  .risk-low {
+    @apply bg-green-100 text-green-800 border-green-200;
+  }
+  
+  .gradient-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  }
+  
+  .subfinder-card {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-50 border-l-4 border-blue-500 rounded-lg p-6 shadow-md;
+  }
+}
